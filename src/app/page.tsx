@@ -1,16 +1,11 @@
+import FrequentlyAskedQuestions from "~/components/brand/FAQ";
 import TopNav from "~/components/navigation/TopNav";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "~/components/ui/accordion";
 
 export default function HomePage() {
   return (
     <>
       <TopNav />
-      <main className="bg-background text-foreground flex min-h-screen flex-col items-center justify-center gap-32 p-5">
+      <main className="flex min-h-screen flex-col items-center justify-center gap-32 bg-background p-5 text-foreground">
         <div
           id="hero"
           className="container flex h-dvh flex-col items-center justify-center gap-12 px-4 py-16"
@@ -35,17 +30,7 @@ export default function HomePage() {
             Pricing
           </h2>
         </div>
-        <div className="container flex h-dvh max-w-4xl flex-col items-center justify-center gap-12 px-4 py-16">
-          <h2 id="faq" className="scroll-m-20 text-4xl">
-            FAQ
-          </h2>
-          <Accordion type="single" collapsible className="min-w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Question #1?</AccordionTrigger>
-              <AccordionContent>Answer to Question #1.</AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
+        <FrequentlyAskedQuestions />
       </main>
     </>
   );
